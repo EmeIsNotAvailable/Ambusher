@@ -13,6 +13,7 @@ public class Dialogue_Manager : MonoBehaviour
     public float typingSpeed;
     AudioSource myAudio;
     public AudioClip speakSound;
+    public bool ontrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,16 +47,24 @@ public class Dialogue_Manager : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             StartDialogue();
+            ontrigger=true;
         }
     }
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D col)
     {
-        if(other.CompareTag("Player"))
+        if(col.CompareTag("Player"))
         {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                DisplayNextSentence();
-            }
+            ontrigger=false;
         }
+    }
+    
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)&&ontrigger)
+        {
+            DisplayNextSentence();
+        }
+        
     }
 }
