@@ -14,6 +14,7 @@ public class Dialogue_Manager : MonoBehaviour
     AudioSource myAudio;
     public AudioClip speakSound;
     public bool ontrigger;
+    public bool DialogueStart;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class Dialogue_Manager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         DisplayNextSentence();
-        
+                
     }
     void DisplayNextSentence()
         {
@@ -39,14 +40,28 @@ public class Dialogue_Manager : MonoBehaviour
                 return;
             }
             activeSentence = sentences.Dequeue();
-            Debug.Log(activeSentence);
+            displayText.text = activeSentence;
+            StopAllCoroutines();
+            StartCoroutine(TypeTheSentence(activeSentence));
         }
+
+    IEnumerator TypeTheSentence(string sentence)
+    {
+        displayText.text="";
+        foreach(char letter in sentence.ToCharArray())
+        {
+            displayText.text += letter;
+            myAudio.PlayOneShot(speakSound);
+            yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+    
     
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.CompareTag("Player"))
         {
-            StartDialogue();
+            dialoguePanel.SetActive(true);
             ontrigger=true;
         }
     }
@@ -55,15 +70,23 @@ public class Dialogue_Manager : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             ontrigger=false;
+            dialoguePanel.SetActive(false);
         }
     }
     
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&&ontrigger)
+        if (Input.GetKeyDown(KeyCode.E)&&ontrigger)
         {
-            DisplayNextSentence();
+            if(DialogueStart==false)
+            {
+                StartDialogue();
+                DialogueStart=true;
+            }
+            else{
+                 DisplayNextSentence();
+            }
         }
         
     }
