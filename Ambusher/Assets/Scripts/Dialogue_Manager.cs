@@ -15,6 +15,7 @@ public class Dialogue_Manager : MonoBehaviour
     public AudioClip speakSound;
     public bool ontrigger;
     public bool DialogueStart;
+    public GameObject interaccion;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,20 +60,23 @@ public class Dialogue_Manager : MonoBehaviour
     }
     
     
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.CompareTag("Player") )
+        if(col.gameObject.tag == "Player" )
         {
             
             ontrigger=true;
+            interaccion.SetActive(true);
         }
     }
-    private void OnTriggerExit2D(Collider2D col)
+    
+    private void OnCollisionExit2D(Collision2D col)
     {
-        if(col.CompareTag("Player"))
+        if(col.gameObject.tag == "Player")
         {
             ontrigger=false;
             dialoguePanel.SetActive(false);
+            interaccion.SetActive(false);
             DialogueStart = false;
 
         }
