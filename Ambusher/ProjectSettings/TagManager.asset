@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Rojo
+  - bola
+  - brick
+  - horizontal
+  - vertical
+  - bottom
   layers:
   - Default
   - TransparentFX
