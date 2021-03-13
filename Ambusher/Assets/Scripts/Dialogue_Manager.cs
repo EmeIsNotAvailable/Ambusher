@@ -37,6 +37,8 @@ public class Dialogue_Manager : MonoBehaviour
             if(sentences.Count <= 0)
             {
                 displayText.text = activeSentence;
+                dialoguePanel.SetActive(false);
+                DialogueStart = false;
                 return;
             }
             activeSentence = sentences.Dequeue();
@@ -59,9 +61,9 @@ public class Dialogue_Manager : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Player"))
+        if(col.CompareTag("Player") )
         {
-            dialoguePanel.SetActive(true);
+            
             ontrigger=true;
         }
     }
@@ -71,6 +73,8 @@ public class Dialogue_Manager : MonoBehaviour
         {
             ontrigger=false;
             dialoguePanel.SetActive(false);
+            DialogueStart = false;
+
         }
     }
     
@@ -79,7 +83,8 @@ public class Dialogue_Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E)&&ontrigger)
         {
-            if(DialogueStart==false)
+            dialoguePanel.SetActive(true);
+            if (DialogueStart==false)
             {
                 StartDialogue();
                 DialogueStart=true;

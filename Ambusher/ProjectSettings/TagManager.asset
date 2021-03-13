@@ -10,6 +10,10 @@ TagManager:
   - horizontal
   - vertical
   - bottom
+  - escritori
+  - llit
+  - motxila
+  - porta habitacio
   layers:
   - Default
   - TransparentFX

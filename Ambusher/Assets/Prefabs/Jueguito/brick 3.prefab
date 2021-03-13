@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3856758444212186093}
   - component: {fileID: 3856758444212186090}
   m_Layer: 0
-  m_Name: "Ilustracio\u0301n-sin-ti\u0301tulo 2"
+  m_Name: brick 3
   m_TagString: horizontal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a0553a451df05264cb5e6b75ab305ea4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
