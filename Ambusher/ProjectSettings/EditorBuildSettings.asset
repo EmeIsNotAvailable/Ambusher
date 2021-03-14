@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Cocina noche.unity
+    guid: 2c6044ea15941eb4d982b621fe80b053
+  - enabled: 1
+    path: Assets/Scenes/Cocina.unity
+    guid: 7b6de925be55c414ab72cd54de589913
+  - enabled: 1
+    path: Assets/Scenes/Comedor.unity
+    guid: fb2410d38b2e2374fac38f2099d9b369
+  - enabled: 1
+    path: "Assets/Scenes/Habitaci\xF3n noche.unity"
+    guid: 98edcbb606094a84d907a992923e9dec
+  - enabled: 1
+    path: "Assets/Scenes/Habitaci\xF3n.unity"
+    guid: a584d403482d91f49a55ce9983e32109
+  - enabled: 1
+    path: Assets/Scenes/Jueguito.unity
+    guid: d736a3ac0ba035849878b99a9e6e5f93
   m_configObjects: {}
