@@ -236,6 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ontrigger: 0
+  levelName: PasilloNoche
+  interaccion: {fileID: 1928722870}
 --- !u!1001 &1093582162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,12 +258,12 @@ PrefabInstance:
     - target: {fileID: 5469433037612310524, guid: 281ba1a63aa978841a527d1ebff56139,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8146782
+      value: -3.72
       objectReference: {fileID: 0}
     - target: {fileID: 5469433037612310524, guid: 281ba1a63aa978841a527d1ebff56139,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6429448
+      value: -0.88
       objectReference: {fileID: 0}
     - target: {fileID: 5469433037612310524, guid: 281ba1a63aa978841a527d1ebff56139,
         type: 3}
@@ -519,6 +521,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1928722870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7143832397667517153, guid: 49c22040e63c13244898f6a5bb85db4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 898789825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2006858851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,6 +569,11 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 102015764}
+    - target: {fileID: 2465765377049503234, guid: d56f101538cf70949831bdc410d9bc84,
+        type: 3}
+      propertyPath: dialogue.sentenceList.Array.data[0]
+      value: Ya he bebido
+      objectReference: {fileID: 0}
     - target: {fileID: 2465765377049503245, guid: d56f101538cf70949831bdc410d9bc84,
         type: 3}
       propertyPath: m_RootOrder

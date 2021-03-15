@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class puerta : MonoBehaviour
 {
     public bool ontrigger;
     public string levelName;
+    public GameObject interaccion;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,8 @@ public class puerta : MonoBehaviour
         {
 
             ontrigger = true;
-            
+            interaccion.SetActive(true);
+
         }
     }
 
@@ -27,7 +30,8 @@ public class puerta : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             ontrigger = false;
-            
+            interaccion.SetActive(false);
+
 
         }
     }

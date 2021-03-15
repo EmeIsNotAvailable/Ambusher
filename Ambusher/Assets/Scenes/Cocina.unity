@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &395923585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2465765376795478638, guid: d56f101538cf70949831bdc410d9bc84,
+    type: 3}
+  m_PrefabInstance: {fileID: 2465765376792842660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &924875034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7143832397667517153, guid: 49c22040e63c13244898f6a5bb85db4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7143832397844462032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &963192624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361,12 +373,12 @@ PrefabInstance:
     - target: {fileID: 5469433037612310524, guid: 281ba1a63aa978841a527d1ebff56139,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4641416
+      value: -5.64
       objectReference: {fileID: 0}
     - target: {fileID: 5469433037612310524, guid: 281ba1a63aa978841a527d1ebff56139,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55826485
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5469433037612310524, guid: 281ba1a63aa978841a527d1ebff56139,
         type: 3}
@@ -410,6 +422,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 281ba1a63aa978841a527d1ebff56139, type: 3}
+--- !u!1 &1684922130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7143832396526721268, guid: 49c22040e63c13244898f6a5bb85db4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7143832397844462032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1684922131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684922130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57730fe3f6a0a414ea3b4f4e0d2b53ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ontrigger: 0
+  levelName: Pasillo
+  interaccion: {fileID: 924875034}
 --- !u!1001 &27016580957402116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -556,6 +589,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nevera
       objectReference: {fileID: 0}
+    - target: {fileID: 546155183333666157, guid: dc4c69798ed63644e96063a8c7033888,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc4c69798ed63644e96063a8c7033888, type: 3}
 --- !u!1001 &2465765376792842660
@@ -565,6 +603,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2465765376795478638, guid: d56f101538cf70949831bdc410d9bc84,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2465765377049503233, guid: d56f101538cf70949831bdc410d9bc84,
         type: 3}
       propertyPath: m_Name
@@ -575,6 +618,11 @@ PrefabInstance:
       propertyPath: displayText
       value: 
       objectReference: {fileID: 1425910149}
+    - target: {fileID: 2465765377049503234, guid: d56f101538cf70949831bdc410d9bc84,
+        type: 3}
+      propertyPath: interaccion
+      value: 
+      objectReference: {fileID: 395923585}
     - target: {fileID: 2465765377049503234, guid: d56f101538cf70949831bdc410d9bc84,
         type: 3}
       propertyPath: dialoguePanel
